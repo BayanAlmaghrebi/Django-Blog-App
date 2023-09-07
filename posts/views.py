@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .models import Post , Comment
 from .forms import PostForm
 
@@ -24,6 +24,7 @@ def add_post(request):
             myform = form.save(commit=False)
             myform.author = request.user
             myform.save()
+            return redirect ('/blog/')
 
     else:
         form = PostForm()
