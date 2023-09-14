@@ -5,9 +5,9 @@ from .forms import PostForm
 
 
 def post_list(request): 
-    data = Post.objects.all() # list
+    data = Post.objects.all() # list  # 1 :query
     return render(request,'all_post.html',{'posts':data})  # 3 (request, 'html', context{})
-
+                        # 2 : html page   3 : context
 
 
 
