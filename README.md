@@ -1,4 +1,5 @@
 # Django Blog App
 # Django
 # Html
-# css.
+# css
+# js
